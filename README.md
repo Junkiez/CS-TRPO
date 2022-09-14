@@ -1,4 +1,4 @@
 # CSharp-TRPO
-## TRPO LAbs on C#
+## TRPO Labs on C#
 
 * Lab1 - work with collections
