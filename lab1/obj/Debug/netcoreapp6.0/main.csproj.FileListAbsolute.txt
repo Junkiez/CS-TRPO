@@ -1,0 +1,15 @@
+/home/runner/CSharp-1/lab1/bin/Debug/netcoreapp6.0/main
+/home/runner/CSharp-1/lab1/bin/Debug/netcoreapp6.0/main.deps.json
+/home/runner/CSharp-1/lab1/bin/Debug/netcoreapp6.0/main.runtimeconfig.json
+/home/runner/CSharp-1/lab1/bin/Debug/netcoreapp6.0/main.dll
+/home/runner/CSharp-1/lab1/bin/Debug/netcoreapp6.0/ref/main.dll
+/home/runner/CSharp-1/lab1/bin/Debug/netcoreapp6.0/main.pdb
+/home/runner/CSharp-1/lab1/obj/Debug/netcoreapp6.0/main.csproj.AssemblyReference.cache
+/home/runner/CSharp-1/lab1/obj/Debug/netcoreapp6.0/main.GeneratedMSBuildEditorConfig.editorconfig
+/home/runner/CSharp-1/lab1/obj/Debug/netcoreapp6.0/main.AssemblyInfoInputs.cache
+/home/runner/CSharp-1/lab1/obj/Debug/netcoreapp6.0/main.AssemblyInfo.cs
+/home/runner/CSharp-1/lab1/obj/Debug/netcoreapp6.0/main.csproj.CoreCompileInputs.cache
+/home/runner/CSharp-1/lab1/obj/Debug/netcoreapp6.0/main.dll
+/home/runner/CSharp-1/lab1/obj/Debug/netcoreapp6.0/ref/main.dll
+/home/runner/CSharp-1/lab1/obj/Debug/netcoreapp6.0/main.pdb
+/home/runner/CSharp-1/lab1/obj/Debug/netcoreapp6.0/main.genruntimeconfig.cache
