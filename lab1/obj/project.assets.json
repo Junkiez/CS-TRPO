@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/runner/CSharp-1/lab1/main.csproj",
+      "projectUniqueName": "/home/runner/CSharp/lab1/main.csproj",
       "projectName": "main",
-      "projectPath": "/home/runner/CSharp-1/lab1/main.csproj",
+      "projectPath": "/home/runner/CSharp/lab1/main.csproj",
       "packagesPath": "/home/runner/.nuget/packages/",
-      "outputPath": "/home/runner/CSharp-1/lab1/obj/",
+      "outputPath": "/home/runner/CSharp/lab1/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/runner/.nuget/NuGet/NuGet.Config"
