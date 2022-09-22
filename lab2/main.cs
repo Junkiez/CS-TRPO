@@ -79,8 +79,22 @@ class Plane
         }
         set
         {
-            this.alt.Height = value;
+            var step2 = (value + this.height) / 2;
+            var step1 = (step2 + this.height) / 2;
+            var step3 = (step2 + value) / 2;
+            Thread.Sleep(300);
+            Console.WriteLine(new string ('-', (int)Math.Round(step1/1000)*7));
+            Thread.Sleep(300);
+            Console.WriteLine(new string ('-', (int)Math.Round(step2/1000)*7));
+            Thread.Sleep(300);
+            Console.WriteLine(new string ('-', (int)Math.Round(step3/1000)*7));
+            Thread.Sleep(300);
+            Console.Write(new string ('-', (int)Math.Round(value/1000)*7));
+            Thread.Sleep(300);
+            if(value < 5000)
+              Console.WriteLine($" {value} ");
             this.height = value;
+            this.alt.Height = value;
         }
     }
 
@@ -100,8 +114,8 @@ class Plane
 
     private void HeightHandler(object sender, HightEventArgs args)
     {
-        Console.WriteLine($"Autopilot on: {args.OldHeight}->{args.NewHeight}");
-        this.height = 4500;
+        Console.WriteLine($"Autopilot: ({args.OldHeight}->{args.NewHeight}) ");
+        this.Height = 4500;
         this.alt.Height = 4500;
     }
 }
@@ -112,10 +126,10 @@ class Program
     {
         var p = new Plane("Мрія", 67);
         var rand = new Random();
-        for (var i = 0; i < 5; i++)
+        for (var i = 0; i < 15; i++)
         {
-            p.Height = rand.Next(3000, 8000);
-            Console.WriteLine("<----->");
+            p.Height = rand.Next(2000, 9000);
         }
+        Console.WriteLine(" ");
     }
 }
