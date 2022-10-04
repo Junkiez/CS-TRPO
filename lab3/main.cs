@@ -137,7 +137,6 @@ class Matrix<T> where T : class, IComparable, IRand, new()
 
 }
 
-
 class Program
 {
     public static void Main(string[] args)
