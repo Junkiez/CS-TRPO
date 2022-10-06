@@ -5,15 +5,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
 
-class SerialException : Exception
+public class SerialException : Exception
 {
     public SerialException() { }
 
     public SerialException(string txt) : base($"SerialException: {txt}") { }
 }
 
-[Serializable]
-class SerialNumber : IComparable
+public class SerialNumber : IComparable
 {
     private String clas;
     private long timestamp;
@@ -33,7 +32,7 @@ class SerialNumber : IComparable
 
     public String Class
     {
-        private set
+        set
         {
             if (value.Length != 2)
             {
@@ -53,6 +52,10 @@ class SerialNumber : IComparable
         {
             return this.timestamp;
         }
+        set
+        {
+            this.timestamp = value;
+        }
     }
 
     public SerialNumber(String clas = "xm")
@@ -68,6 +71,20 @@ class SerialNumber : IComparable
         this.timestamp = (long)(DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0)).TotalSeconds;
     }
 
+    public SerialNumber()
+    {
+        try
+        {
+            this.Class = "xm";
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.ToString());
+        }
+        this.timestamp = (long)(DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0)).TotalSeconds;
+    }
+
+
     public override String ToString()
     {
         return $"{this.clas}{this.timestamp}";
@@ -75,15 +92,13 @@ class SerialNumber : IComparable
 
 }
 
-[Serializable]
-
-class Component : IComparable
+public class Component : IComparable
 {
-    private static List<SerialNumber> history;
-    private String name;
-    private SerialNumber serial;
-    private String country;
-    private float price;
+    static private List<SerialNumber> history = new List<SerialNumber>();
+    public String name;
+    public SerialNumber serial;
+    public String country;
+    public float price;
 
     public SerialNumber Serial
     {
@@ -121,6 +136,7 @@ class Component : IComparable
 
     public Component(String name, String country, float price)
     {
+        Thread.Sleep(1000);
         this.name = name;
         this.serial = new SerialNumber("xx");
         this.country = country;
@@ -159,6 +175,11 @@ class Box<T> where T : Component
             Console.WriteLine(i.ToString());
     }
 
+    public Box()
+    {
+        this.list = new List<T>();
+    }
+
     public void DisplayBy(String name = "", String country = "")
     {
         if (name != "" && country != "")
@@ -182,6 +203,8 @@ class Box<T> where T : Component
                     Console.WriteLine(i.ToString());
                     return;
                 }
+        foreach (var i in this.list)
+            Console.WriteLine(i.ToString());
     }
 
     public void Sort()
@@ -195,20 +218,42 @@ class Box<T> where T : Component
     }
 
     public void Serialize()
-    {  
-        BinaryFormatter bf = new BinaryFormatter();
-        FileStream fsout = new FileStream("data.bin", FileMode.Create, FileAccess.Write, FileShare.None);
-        try
-        {
-          using (fsout)
-          {
-            bf.Serialize(fsout, this.list);
-          }
-        }
-        catch
-        {
-          Console.WriteLine("An error has occured");
-        }
+    {
+        System.Xml.Serialization.XmlSerializer writer =
+            new System.Xml.Serialization.XmlSerializer(typeof(List<T>));
+        System.IO.FileStream file = System.IO.File.Create("./SerializationOverview.xml");
+        writer.Serialize(file, this.list);
+        file.Close();
+    }
+
+    public void Serialize(T o)
+    {
+        System.Xml.Serialization.XmlSerializer writer =
+            new System.Xml.Serialization.XmlSerializer(typeof(T));
+        System.IO.FileStream file = System.IO.File.Create("./obj.xml");
+        writer.Serialize(file, o);
+        file.Close();
+    }
+
+    public void DeSerialize()
+    {
+        System.Xml.Serialization.XmlSerializer reader =
+          new System.Xml.Serialization.XmlSerializer(typeof(List<T>));
+        System.IO.StreamReader file = new System.IO.StreamReader(
+            "./SerializationOverview.xml");
+        this.list = (List<T>)reader.Deserialize(file);
+        file.Close();
+    }
+
+    public T DeSerializeO()
+    {
+        System.Xml.Serialization.XmlSerializer reader =
+          new System.Xml.Serialization.XmlSerializer(typeof(T));
+        System.IO.StreamReader file = new System.IO.StreamReader(
+            "./obj.xml");
+        var o = (T)reader.Deserialize(file);
+        file.Close();
+        return o;
     }
 
 }
@@ -217,6 +262,21 @@ public class Program
 {
     public static void Main(string[] args)
     {
+        var b = new Box<Component>();
+        var c = new Component("hard drive", "us", 250);
+        var c1 = new Component("monitor", "pl", 400);
+        b.Add(c);
+        b.DisplayBy();
         Console.WriteLine("");
+        b.Serialize();
+        b.Add(c1);
+        b.DisplayBy();
+        Console.WriteLine("");
+        b.DeSerialize();
+        b.DisplayBy();
+      Console.WriteLine("\n");
+      b.Serialize(c1);
+      Console.WriteLine(b.DeSerializeO().ToString());
+      
     }
 }

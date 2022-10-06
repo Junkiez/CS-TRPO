@@ -59,7 +59,6 @@ class Elem : IComparable, IRand
     }
 }
 
-
 class Matrix<T> where T : class, IComparable, IRand, new()
 {
 
@@ -97,42 +96,45 @@ class Matrix<T> where T : class, IComparable, IRand, new()
 
     public void NonNullRowsCount()
     {
-      var l = this.rows;
-      for (var i = 0; i < rows; i += 1)
+        var l = this.rows;
+        for (var i = 0; i < rows; i += 1)
         {
             for (var j = 0; j < cols; j += 1)
             {
-              if(this.list[i, j].CompareTo(new T()) == 0){
-                l-=1;
-                break;
-              }
+                if (this.list[i, j].CompareTo(new T()) == 0)
+                {
+                    l -= 1;
+                    break;
+                }
             }
         }
-      Console.WriteLine($" NonNullRowsCount: {l}");
+        Console.WriteLine($" NonNullRowsCount: {l}");
     }
 
 
     public void MaxOfMultiple()
     {
-      var l = new ArrayList();
-      for (var i = 0; i < rows; i += 1)
+        var l = new ArrayList();
+        for (var i = 0; i < rows; i += 1)
         {
             for (var j = 0; j < cols; j += 1)
             {
-              l.Add(this.list[i, j]);
+                l.Add(this.list[i, j]);
             }
         }
-      l.Sort();
-      var a = l.ToArray();
-      Array.Reverse(a);
-      var e = new T();
-      foreach(var i in a){
-        if(e.ToString() == i.ToString()){
-          Console.WriteLine($" MaxOfMultiple: {i.ToString()}");
-          return;
+        l.Sort();
+        var a = l.ToArray();
+        Array.Reverse(a);
+        var e = new T();
+        foreach (var i in a)
+        {
+            if (e.ToString() == i.ToString())
+            {
+                Console.WriteLine($" MaxOfMultiple: {i.ToString()}");
+                return;
+            }
+            e = i as T;
         }
-        e = i as T;
-      }
     }
 
 }
@@ -141,8 +143,8 @@ class Program
 {
     public static void Main(string[] args)
     {
-      var m = new Matrix<Elem>(3, 5);
-      m.NonNullRowsCount();
-      m.MaxOfMultiple();
+        var m = new Matrix<Elem>(3, 5);
+        m.NonNullRowsCount();
+        m.MaxOfMultiple();
     }
 }
