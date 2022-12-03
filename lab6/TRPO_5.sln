@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRPO_5", "TRPO_5\TRPO_5.csproj", "{DA845B46-37E8-4EAB-B278-E18C38B5F116}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA845B46-37E8-4EAB-B278-E18C38B5F116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA845B46-37E8-4EAB-B278-E18C38B5F116}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA845B46-37E8-4EAB-B278-E18C38B5F116}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA845B46-37E8-4EAB-B278-E18C38B5F116}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {767B45A2-B68E-4B3D-BEE1-7E5C26159C14}
+	EndGlobalSection
+EndGlobal
