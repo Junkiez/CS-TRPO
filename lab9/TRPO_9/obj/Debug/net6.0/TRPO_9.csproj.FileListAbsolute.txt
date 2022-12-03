@@ -1,0 +1,15 @@
+C:\extra\TRPO_9\TRPO_9\bin\Debug\net6.0\TRPO_9.exe
+C:\extra\TRPO_9\TRPO_9\bin\Debug\net6.0\TRPO_9.deps.json
+C:\extra\TRPO_9\TRPO_9\bin\Debug\net6.0\TRPO_9.runtimeconfig.json
+C:\extra\TRPO_9\TRPO_9\bin\Debug\net6.0\TRPO_9.dll
+C:\extra\TRPO_9\TRPO_9\bin\Debug\net6.0\TRPO_9.pdb
+C:\extra\TRPO_9\TRPO_9\obj\Debug\net6.0\TRPO_9.csproj.AssemblyReference.cache
+C:\extra\TRPO_9\TRPO_9\obj\Debug\net6.0\TRPO_9.GeneratedMSBuildEditorConfig.editorconfig
+C:\extra\TRPO_9\TRPO_9\obj\Debug\net6.0\TRPO_9.AssemblyInfoInputs.cache
+C:\extra\TRPO_9\TRPO_9\obj\Debug\net6.0\TRPO_9.AssemblyInfo.cs
+C:\extra\TRPO_9\TRPO_9\obj\Debug\net6.0\TRPO_9.csproj.CoreCompileInputs.cache
+C:\extra\TRPO_9\TRPO_9\obj\Debug\net6.0\TRPO_9.dll
+C:\extra\TRPO_9\TRPO_9\obj\Debug\net6.0\refint\TRPO_9.dll
+C:\extra\TRPO_9\TRPO_9\obj\Debug\net6.0\TRPO_9.pdb
+C:\extra\TRPO_9\TRPO_9\obj\Debug\net6.0\TRPO_9.genruntimeconfig.cache
+C:\extra\TRPO_9\TRPO_9\obj\Debug\net6.0\ref\TRPO_9.dll

@@ -1,0 +1,15 @@
+C:\extra\TRPO_8\TRPO_8\bin\Debug\net6.0\TRPO_8.exe
+C:\extra\TRPO_8\TRPO_8\bin\Debug\net6.0\TRPO_8.deps.json
+C:\extra\TRPO_8\TRPO_8\bin\Debug\net6.0\TRPO_8.runtimeconfig.json
+C:\extra\TRPO_8\TRPO_8\bin\Debug\net6.0\TRPO_8.dll
+C:\extra\TRPO_8\TRPO_8\bin\Debug\net6.0\TRPO_8.pdb
+C:\extra\TRPO_8\TRPO_8\obj\Debug\net6.0\TRPO_8.csproj.AssemblyReference.cache
+C:\extra\TRPO_8\TRPO_8\obj\Debug\net6.0\TRPO_8.GeneratedMSBuildEditorConfig.editorconfig
+C:\extra\TRPO_8\TRPO_8\obj\Debug\net6.0\TRPO_8.AssemblyInfoInputs.cache
+C:\extra\TRPO_8\TRPO_8\obj\Debug\net6.0\TRPO_8.AssemblyInfo.cs
+C:\extra\TRPO_8\TRPO_8\obj\Debug\net6.0\TRPO_8.csproj.CoreCompileInputs.cache
+C:\extra\TRPO_8\TRPO_8\obj\Debug\net6.0\TRPO_8.dll
+C:\extra\TRPO_8\TRPO_8\obj\Debug\net6.0\refint\TRPO_8.dll
+C:\extra\TRPO_8\TRPO_8\obj\Debug\net6.0\TRPO_8.pdb
+C:\extra\TRPO_8\TRPO_8\obj\Debug\net6.0\TRPO_8.genruntimeconfig.cache
+C:\extra\TRPO_8\TRPO_8\obj\Debug\net6.0\ref\TRPO_8.dll
